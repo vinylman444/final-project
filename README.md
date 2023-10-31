@@ -34,28 +34,15 @@ An Example Enemy:
 ```
 
 
-An Example Item:
+An Example Equipment:
 
 ```javascript
 {
   name: "name",
+  description: "this is a weapon",
   sellvalue: number,
   droprate: number,
   damage: number
-}
-```
-
-An Example List with Embedded Items:
-
-```javascript
-{
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
 }
 ```
 
