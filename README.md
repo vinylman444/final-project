@@ -41,6 +41,7 @@ An Example Equipment:
   name: "name",
   description: "this is a weapon",
   sellvalue: number,
+  buyvalue: number,
   droprate: number,
   damage: number
 }
@@ -55,17 +56,13 @@ An Example Equipment:
 
 (__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
-/list/create - page for creating a new shopping list
+/login - player login page
 
-![list create](documentation/list-create.png)
+/game - page where the core gameplay occurs
 
-/list - page for showing all shopping lists
+/game/inventory - page to access and modify the player's inventory
 
-![list](documentation/list.png)
-
-/list/slug - page for showing specific shopping list
-
-![list](documentation/list-slug.png)
+/game/shop - page to buy and sell equipment
 
 ## Site map
 
@@ -79,10 +76,10 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
 
 1. as non-registered user, I can register a new account with the site
 2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
+3. as a user, I can play the game by idling
+4. as a user, I can purchase and sell equipment
+5. as a user, I can modify my equipment inventory
+
 
 ## Research Topics
 
