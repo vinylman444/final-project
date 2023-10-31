@@ -1,36 +1,47 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
-
-(__TODO__: your project name)
-
-# Shoppy Shoperson 
+# Idle RPG
 
 ## Overview
 
-(__TODO__: a brief one or two paragraph, high-level description of your project)
-
-Remembering what to buy at the grocery store is waaaaay too difficult. Also, shopping for groceries when you're hungry leads to regrettable purchases. Sooo... that's where Shoppy Shoperson comes in!
-
-Shoppy Shoperson is a web app that will allow users to keep track of multiple grocery lists. Users can register and login. Once they're logged in, they can create or view their grocery list. For every list that they have, they can add items to the list or cross off items.
-
+An Idle game where the player fights waves of enemies with no input and upgrade their equipment to deal damage faster.
+This game is based on clicker heroes.
 
 ## Data Model
 
-(__TODO__: a description of your application's data and their relationships to each other) 
+This application will store Players, Enemies, Equipment, and Gold
 
-The application will store Users, Lists and Items
+* Players have an inventory where they keep equipment and gold
+* Enemies have a drop table that determine the equipment and gold they drop and the probability assosiated
 
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
-
-(__TODO__: sample documents)
-
-An Example User:
+An Example Player:
 
 ```javascript
 {
-  username: "shannonshopper",
+  username: "username",
   hash: // a password hash,
-  lists: // an array of references to List documents
+  gold: number
+  inventory: // an array containing equipment
+}
+```
+
+An Example Enemy:
+
+```javascript
+{
+  name: "name",
+  golddrop: number,
+  droptable: // an array all possible drops
+}
+```
+
+
+An Example Item:
+
+```javascript
+{
+  name: "name",
+  sellvalue: number,
+  droprate: number,
+  damage: number
 }
 ```
 
