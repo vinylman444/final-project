@@ -67,6 +67,8 @@ An Example Game:
 
 /home/add-game - page that allows a user to add a game
 
+/home/account - page that display's the games and locations a the user has added
+
 ## Site map
 
 (__TODO__: draw out a site map that shows how pages are related to each other)
