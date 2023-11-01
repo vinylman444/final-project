@@ -1,50 +1,50 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
-
-(__TODO__: your project name)
-
-# Shoppy Shoperson 
+# Arcade Rhythm games Map
 
 ## Overview
 
-(__TODO__: a brief one or two paragraph, high-level description of your project)
-
-Remembering what to buy at the grocery store is waaaaay too difficult. Also, shopping for groceries when you're hungry leads to regrettable purchases. Sooo... that's where Shoppy Shoperson comes in!
-
-Shoppy Shoperson is a web app that will allow users to keep track of multiple grocery lists. Users can register and login. Once they're logged in, they can create or view their grocery list. For every list that they have, they can add items to the list or cross off items.
-
+A map of known locations of specific arcade rhythm games contributed by users.
+Users can either add specific games and their costs/conditions to an existing location or 
+they can add a new location to the map.
+This site is based on bemanicn.com, a website that shows locations of arcades with rhythm games in China.
 
 ## Data Model
 
-(__TODO__: a description of your application's data and their relationships to each other) 
+This application will store Users, games, and locations
 
-The application will store Users, Lists and Items
-
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
-
-(__TODO__: sample documents)
+* Users will store locations and games they have added
+* Locations will store games
 
 An Example User:
 
 ```javascript
 {
-  username: "shannonshopper",
+  username: "username",
   hash: // a password hash,
-  lists: // an array of references to List documents
+  games: //an array containing the games the user uploaded
+  locations: // an array containing the locations the user uploaded
 }
 ```
 
-An Example List with Embedded Items:
+An Example Location:
 
 ```javascript
 {
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
+  name: "name",
+  description: "description",
+  image: "path to image",
+  games: // an array containing games at this location
+}
+```
+
+An Example Game:
+
+```javascript
+{
+  name: "name",
+  condition: //either "Broken", "Poor", "Mediocre", "Good", "Excellent", and "Perfect",
+  cost: number //the cost is based on per play
+  description: "description"
+  image: "path to image"
 }
 ```
 
@@ -57,17 +57,17 @@ An Example List with Embedded Items:
 
 (__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
-/list/create - page for creating a new shopping list
+/login - player login page
 
-![list create](documentation/list-create.png)
+/home - page that has a map with marked points representing a location
 
-/list - page for showing all shopping lists
+/home/filter - page that shows all the filtering options
 
-![list](documentation/list.png)
+/home/add-location - page that allows a user to add a location
 
-/list/slug - page for showing specific shopping list
+/home/add-game - page that allows a user to add a game
 
-![list](documentation/list-slug.png)
+/home/account - page that display's the games and locations a the user has added
 
 ## Site map
 
@@ -81,10 +81,12 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
 
 1. as non-registered user, I can register a new account with the site
 2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
+3. as a user, I can view the map and its locations and games
+4. as a user, I can filter locations by their games
+5. as a user, I can add a game to a location
+6. as a user, I can add a location to the map
+7. as a user, I can modify my added locations and games
+
 
 ## Research Topics
 
@@ -100,6 +102,8 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
     * if you put in a number that's greater than 5, an error message will appear in the dom
 * (5 points) vue.js
     * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
+* (1 point) Google Maps api
+    * used the google maps api to function as the actual map containing the locations
 
 10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit)
 
