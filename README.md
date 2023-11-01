@@ -5,6 +5,7 @@
 A map of known locations of specific arcade rhythm games contributed by users.
 Users can either add specific games and their costs/conditions to an existing location or 
 they can add a new location to the map.
+This site is based on bemanicn.com, a website that shows locations of arcades with rhythm games in China.
 
 ## Data Model
 
