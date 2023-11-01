@@ -1,49 +1,49 @@
-# Idle RPG
+# Arcade Rhythm games Map
 
 ## Overview
 
-An Idle game where the player fights waves of enemies with no input and upgrade their equipment to deal damage faster.
-This game is based on clicker heroes.
+A map of known locations of specific arcade rhythm games contributed by users.
+Users can either add specific games and their costs/conditions to an existing location or 
+they can add a new location to the map.
 
 ## Data Model
 
-This application will store Players, Enemies, Equipment, and Gold
+This application will store Users, games, and locations
 
-* Players have an inventory where they keep equipment and gold
-* Enemies have a drop table that determine the equipment and gold they drop and the probability assosiated
+* Users will store locations and games they have added
+* Locations will store games
 
-An Example Player:
+An Example User:
 
 ```javascript
 {
   username: "username",
   hash: // a password hash,
-  gold: number
-  inventory: // an array containing equipment
+  games: //an array containing the games the user uploaded
+  locations: // an array containing the locations the user uploaded
 }
 ```
 
-An Example Enemy:
+An Example Location:
 
 ```javascript
 {
   name: "name",
-  golddrop: number,
-  droptable: // an array all possible drops
+  description: "description",
+  image: "path to image",
+  games: // an array containing games at this location
 }
 ```
 
-
-An Example Equipment:
+An Example Game:
 
 ```javascript
 {
   name: "name",
-  description: "this is a weapon",
-  sellvalue: number,
-  buyvalue: number,
-  droprate: number,
-  damage: number
+  condition: //either "Broken", "Poor", "Mediocre", "Good", "Excellent", and "Perfect",
+  cost: number //the cost is based on per play
+  description: "description"
+  image: "path to image"
 }
 ```
 
@@ -58,11 +58,13 @@ An Example Equipment:
 
 /login - player login page
 
-/game - page where the core gameplay occurs
+/home - page that has a map with marked points representing a location
 
-/game/inventory - page to access and modify the player's inventory
+/home/filter - page that shows all the filtering options
 
-/game/shop - page to buy and sell equipment
+/home/add-location - page that allows a user to add a location
+
+/home/add-game - page that allows a user to add a game
 
 ## Site map
 
@@ -76,9 +78,11 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
 
 1. as non-registered user, I can register a new account with the site
 2. as a user, I can log in to the site
-3. as a user, I can play the game by idling
-4. as a user, I can purchase and sell equipment
-5. as a user, I can modify my equipment inventory
+3. as a user, I can view the map and its locations and games
+4. as a user, I can filter locations by their games
+5. as a user, I can add a game to a location
+6. as a user, I can add a location to the map
+7. as a user, I can modify my added locations and games
 
 
 ## Research Topics
@@ -95,6 +99,8 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
     * if you put in a number that's greater than 5, an error message will appear in the dom
 * (5 points) vue.js
     * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
+* (1 point) Google Maps api
+    * used the google maps api to function as the actual map containing the locations
 
 10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit)
 
