@@ -58,6 +58,7 @@ An Example Game:
 (__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
 /login - player login page
+![alt text](public/img/home.png)
 
 /home - page that has a map with marked points representing a location
 
