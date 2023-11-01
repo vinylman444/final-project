@@ -58,17 +58,22 @@ An Example Game:
 (__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
 /login - player login page
-![alt text](public/img/home.png)
+![alt text](public/img/login.png)
 
 /home - page that has a map with marked points representing a location
+![alt text](public/img/home.png)
 
 /home/filter - page that shows all the filtering options
+![alt text](public/img/filter.png)
 
 /home/add-location - page that allows a user to add a location
+![alt text](public/img/addarcade.png)
 
 /home/add-game - page that allows a user to add a game
+![alt text](public/img/addgame.png)
 
 /home/account - page that display's the games and locations a the user has added
+![alt text](public/img/account.png)
 
 ## Site map
 
