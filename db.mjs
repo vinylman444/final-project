@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-const Game = new Schema({
+const gameSchema = new Schema({
     Name: {type: String, required: true},
     Condition: {type: String, required: false},
     cost: {type: Number, required: false},
@@ -10,14 +10,14 @@ const Game = new Schema({
     Image: {type: String, required: false}
 });
 
-const Location = new Schema({
+const locationSchema = new Schema({
     Name: {type: String, required: true},
     description: {type: String, required: false},
     Image: {type: String, required: false},
     Games: {type: [Game], required: true}
 });
 
-const User = new Schema({
+const userSchema = new Schema({
   Username: {type: String, required: true},
   Password: { type: String, required: true },
   Games: {type: [Game], required: true},
@@ -25,25 +25,6 @@ const User = new Schema({
 });
 
 
-const Reviews = mongoose.model('Reviews', reviewSchema);
-
-console.log(process.env.DSN);
-
-const mongooseOpts = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-};
-
-async function connectToDatabase() {
-  try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/hw04', mongooseOpts);
-
-    console.log('Connected to database');
-  } catch (error) {
-    console.error('Error connecting to the database:', error);
-  }
-}
-
-connectToDatabase();
-
-export default Reviews;
+const Game = mongoose.model('Game', gameSchema);
+const Location = mongoose.model('Location', locationSchema);
+const User = mongoose.model('User', userSchema);
