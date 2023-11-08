@@ -49,7 +49,9 @@ An Example Game:
 ```
 
 
-## [Link to Commented First Draft Schema](db.mjs) 
+## [Location Schema](app/locations.js) 
+## [Game Schema](app/games.js) 
+## [User Schema](app/users.js) 
 
 ## Wireframes
 
@@ -105,11 +107,6 @@ An Example Game:
     * I will use the google maps JS api to function as the actual map containing the locations
     * The google maps api allows me to display a rendition of google maps on my website.
     * It also allows me to add pointers/markers which will be essential in showing the location of each arcade interactively
-
-
-
-
-## [Link to Initial Main Project File](app.mjs) 
 
 
 ## Annotations / References Used
