@@ -7,6 +7,11 @@ Users can either add specific games and their costs/conditions to an existing lo
 they can add a new location to the map.
 This site is based on bemanicn.com, a website that shows locations of arcades with rhythm games in China.
 
+Milestone 2 Update:
+* Started research on Next.js by building webapp in next.js
+* Started research on google maps api by adding a working map to my site
+* Implemented a form for adding location objects to a MongoDB database
+
 ## Data Model
 
 This application will store Users, games, and locations
@@ -49,9 +54,9 @@ An Example Game:
 ```
 
 
-## [Location Schema](app/locations.js) 
-## [Game Schema](app/games.js) 
-## [User Schema](app/users.js) 
+## [Location Schema](app/models/locations.js) 
+## [Game Schema](app/models/games.js) 
+## [User Schema](app/models/users.js) 
 
 ## Wireframes
 
@@ -97,12 +102,10 @@ An Example Game:
     * dotenv allows me to store configuration in a .env file without it being in the source code.
     * This improves security especially since I will need to store my mongoDB login credientials somewhere.
     * Since I am also using an external API, I want to research on what other applications can be applied potentially like with api keys.
-* (6 points) Frontend with react.js
-    * I will be using react.js as the frontend framework for my website
-    * React is a open source JS library used for building single page applications with more dynamic data that needs to be updated frequently.
-    * React provides a modular component based architecture allowing for modular design for my website which has several different pages that rely on each other.
-    * This is useful for my site as it will require constant updates for the locations and games as well as their positions on the map.
-    * I would also like to learn more of how react.js works differently compared to handlebars
+* (6 points) Frontend with next.js
+    * I will be using next.js as the frontend framework for my website
+    * Originally I wanted to use react but I realized I would have to deploy 2 seperate apps
+    * With next.js, I can use all the functionalities of react while making everything in 1 app.
 * (1 point) Google Maps api
     * I will use the google maps JS api to function as the actual map containing the locations
     * The google maps api allows me to display a rendition of google maps on my website.
