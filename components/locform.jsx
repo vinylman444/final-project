@@ -18,7 +18,7 @@ export default function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Location: ", location);
-
+        
         const res = await fetch('api/location', {
             method: 'POST',
             headers: {
