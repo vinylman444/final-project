@@ -105,3 +105,60 @@ a {
     color-scheme: dark;
   }
 }
+
+body {
+  padding-left: 150px; /* Or any other value */
+  /* ... other styles ... */
+}
+
+
+nav button {
+  padding: 10px 20px; /* Increase padding for larger button size */
+  margin: 0 10px; /* Add margin to space out buttons */
+  font-size: 1rem; /* Adjust font size as needed for better visibility */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+/* You can also add a transition for a better user experience */
+nav button:hover {
+  background-color: #f0f0f0; /* Change the color lightly on hover */
+  transition: background-color 0.3s ease;
+}
+
+
+h1 {
+  margin-top: 20px; /* Adjust the value as needed to push the title down */
+  /* Other styles for h1 if necessary */
+}
+
+.large-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #1100ff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.large-button:hover {
+  background-color: #0056b3;
+}
+
+.large-button2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #00ffae;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.large-button2:hover {
+  background-color: #00f7ff;
+}
+
+
