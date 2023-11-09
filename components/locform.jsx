@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useState } from "react"
-import LocationList from "./LocationList";
+import LocationList from "./locationlist";
 //import { useRouter } from 'next/router';
 
 export default function Form() {
