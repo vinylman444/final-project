@@ -12,6 +12,17 @@ Milestone 2 Update:
 * Started research on google maps api by adding a working map to my site
 * Implemented a form for adding location objects to a MongoDB database
 
+Milestone 3 Update:
+* 3 Forms are working, User Registration, Location, and Game
+* Continued research on Next.js by continuing development of web
+* Continued research on Google maps API for adding custom pointers on map
+* Begun implementation on a login system and research on password security
+
+TODO
+* Implement Pointers on map that contain information about the location when clicked.
+* Implement some way to display a location's game (considering doing a dropdown on the locations page)
+* Add password hashing and salting
+
 ## Data Model
 
 This application will store Users, games, and locations
@@ -22,35 +33,37 @@ This application will store Users, games, and locations
 An Example User:
 
 ```javascript
-{
-  username: "username",
-  hash: // a password hash,
-  games: //an array containing the games the user uploaded
-  locations: // an array containing the locations the user uploaded
-}
+const userSchema = new Schema({
+    Username: {type: String, required: true},
+    Password: { type: String, required: true }, //TODO Make password secure
+    Email: {type: String, required: true},
+    Admin: {type: String, required: true}
+  });
 ```
 
 An Example Location:
 
 ```javascript
-{
-  name: "name",
-  description: "description",
-  image: "path to image",
-  games: // an array containing games at this location
-}
+const locationSchema = new Schema({
+    Name: {type: String, required: true},
+    Description: {type: String, required: false},
+    Image: {type: String, required: false},
+    Games: [{ type: Schema.Types.ObjectId, ref: 'Games', required: false }],
+    XCoord: {type: Number, required: false},
+    YCoord: {type: Number, required: false}
+});
 ```
 
 An Example Game:
 
 ```javascript
-{
-  name: "name",
-  condition: //either "Broken", "Poor", "Mediocre", "Good", "Excellent", and "Perfect",
-  cost: number //the cost is based on per play
-  description: "description"
-  image: "path to image"
-}
+const gameSchema = new Schema({
+    Name: {type: String, required: true},
+    Condition: {type: String, required: false},
+    Cost: {type: Number, required: false},
+    Description: {type: String, required: false},
+    Image: {type: String, required: false}
+});
 ```
 
 
@@ -106,10 +119,11 @@ An Example Game:
     * I will be using next.js as the frontend framework for my website
     * Originally I wanted to use react but I realized I would have to deploy 2 seperate apps
     * With next.js, I can use all the functionalities of react while making everything in 1 app.
-* (1 point) Google Maps api
+* (2 point) Google Maps api
     * I will use the google maps JS api to function as the actual map containing the locations
     * The google maps api allows me to display a rendition of google maps on my website.
     * It also allows me to add pointers/markers which will be essential in showing the location of each arcade interactively
+    * I am increasing this to 2 points since I find that research on building custom pointers and implementing user-added pointers is harder than expected.
 
 
 ## Annotations / References Used
@@ -117,4 +131,3 @@ An Example Game:
 2. [Documentation on Google Maps API](https://developers.google.com/maps/documentation/javascript)
 3. [Dotenv homepage and information](https://www.npmjs.com/package/dotenv)
 4. [React references](https://react.dev/reference/react)
-
