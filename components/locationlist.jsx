@@ -4,7 +4,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-function LocationList() {
+export default function LocationList() {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
@@ -56,5 +56,3 @@ function LocationList() {
     </div>
   );
 }
-
-export default LocationList;
