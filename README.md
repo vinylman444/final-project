@@ -12,6 +12,11 @@ Milestone 2 Update:
 * Started research on google maps api by adding a working map to my site
 * Implemented a form for adding location objects to a MongoDB database
 
+Milestone 3 Update:
+* 3 Forms are working, User Registration, Location, and Game
+* Continued research on Next.js by continuing development of web
+* Continued research on Google maps API for adding custom pointers on map
+
 ## Data Model
 
 This application will store Users, games, and locations
